@@ -22,3 +22,14 @@ counterの数値が変わる毎にバッジの数値を変更するサンプル
     "program": "lib/hide_bottom_navigation_bar/main.dart",
 },
 ```
+
+### shimmerのサンプル
+
+```json
+{
+    "name": "shimmer sample",
+    "request": "launch",
+    "type": "dart",
+    "program": "lib/shimmer/main.dart",
+},
+```
