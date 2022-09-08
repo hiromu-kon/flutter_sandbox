@@ -22,6 +22,11 @@ class MyApp extends StatelessWidget {
   }
 }
 
+/// flutter_app_badgerのサンプル
+///
+/// アプリアイコンにバッジを表示したり、バッジの数値を変更するためのflutterライブラリ
+///
+/// Pub.dev https://pub.dev/packages/flutter_app_badger
 class HomePage extends HookConsumerWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -37,6 +42,8 @@ class HomePage extends HookConsumerWidget {
             ElevatedButton(
               onPressed: () {
                 counter.value++;
+
+                // バッジを追加するメソッド
                 FlutterAppBadger.updateBadgeCount(counter.value);
               },
               child: const Text('Count Up'),
@@ -44,6 +51,8 @@ class HomePage extends HookConsumerWidget {
             ElevatedButton(
               onPressed: () {
                 counter.value--;
+
+                // バッジを追加するメソッド
                 FlutterAppBadger.updateBadgeCount(counter.value);
               },
               child: const Text('Count Down'),
@@ -51,7 +60,9 @@ class HomePage extends HookConsumerWidget {
             ElevatedButton(
               onPressed: () {
                 counter.value = 0;
-                FlutterAppBadger.updateBadgeCount(counter.value);
+
+                // バッジを削除するメソッド
+                FlutterAppBadger.removeBadge();
               },
               child: const Text('Count Reset'),
             ),
